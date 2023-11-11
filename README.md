@@ -21,37 +21,46 @@ The `dataset` folder includes a sample of 8 problem instances. The table below p
 
 Below are the plots of each solution:
 
-### instanceAUni
+### Row 1
+
+#### instanceAUni
 
 - ![instanceAUni.png](plots/instanceAUni.png)
 
-### instanceBUni
+#### instanceBUni
 
 - ![instanceBUni.png](plots/instanceBUni.png)
 
-### instanceCUni
+### Row 2
+
+#### instanceCUni
 
 - ![instanceCUni.png](plots/instanceCUni.png)
 
-### instanceDUni
+#### instanceDUni
 
 - ![instanceDUni.png](plots/instanceDUni.png)
 
-### instanceAExp
+### Row 3
+
+#### instanceAExp
 
 - ![instanceAExp.png](plots/instanceAExp.png)
 
-### instanceBExp
+#### instanceBExp
 
 - ![instanceBExp.png](plots/instanceBExp.png)
 
-### instanceCExp
+### Row 4
+
+#### instanceCExp
 
 - ![instanceCExp.png](plots/instanceCExp.png)
 
-### instanceDExp
+#### instanceDExp
 
 - ![instanceDExp.png](plots/instanceDExp.png)
+
 
 ## Problem Instance Format
 
