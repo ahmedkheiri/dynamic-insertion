@@ -6,16 +6,16 @@ This repository contains the Python implementation of the various heuristic meth
 
 The `dataset` folder includes a sample of 8 problem instances. The table below provides a summary of the characteristics of each instance and the number of customers served using the SoS insertion algorithm:
 
-| Instance         | m   | D   | DL  | SoS |
-|------------------|-----|-----|-----|-----|
-| instanceAUni.xy  | 5   | 2   | Uni | 28  |
-| instanceBUni.xy  | 5   | 4   | Uni | 100 |
-| instanceCUni.xy  | 5   | 2   | Uni | 29  |
-| instanceDUni.xy  | 5   | 4   | Uni | 74  |
-| instanceAExp.xy  | 5   | 2   | Exp | 47  |
-| instanceBExp.xy  | 5   | 4   | Exp | 100 |
-| instanceCExp.xy  | 5   | 2   | Exp | 25  |
-| instanceDExp.xy  | 5   | 4   | Exp | 78  |
+| Instance         | m   | D   | DL  | SoS | SoS with LS |
+|------------------|-----|-----|-----|-----|-------------|
+| instanceAUni.xy  | 5   | 2   | Uni | 28  | 29          |
+| instanceBUni.xy  | 5   | 4   | Uni | 100 | 100         |
+| instanceCUni.xy  | 5   | 2   | Uni | 29  | 30          |
+| instanceDUni.xy  | 5   | 4   | Uni | 74  | 89          |
+| instanceAExp.xy  | 5   | 2   | Exp | 47  | 59          |
+| instanceBExp.xy  | 5   | 4   | Exp | 100 | 100         |
+| instanceCExp.xy  | 5   | 2   | Exp | 25  | 25          |
+| instanceDExp.xy  | 5   | 4   | Exp | 78  | 97          |
 
 ## Solution Plots
 
@@ -23,7 +23,7 @@ Below are the plots of each solution:
 
 ### instanceAUni
 
-![instanceAUni.png](plots/instanceAUni.png)
+![instanceAUni.png](plots/instanceAUni.png | width=300)
 
 ### instanceBUni
 

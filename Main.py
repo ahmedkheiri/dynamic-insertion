@@ -27,7 +27,7 @@ no_runs = 10
 solvers = [SequentialInsertion, QuasiSequentialInsertion, NaiveParallelInsertion, ParallelInsertionWithSeeds, SumOfSquaresInsertion]
 
 no_iterations_factor_LS = 10
-number_of_customers_served_to_apply_LS = 0 # 0 means LS will not be applied
+number_of_customers_served_to_apply_LS = 1 # 0 means LS will not be applied
 isSumSqObj_LS = [False,True]
 
 
@@ -55,6 +55,6 @@ for isSumSqObj in isSumSqObj_LS:
                 no_customers.append(solver.getSolution().getSolutionNumberOfSatisfiedCustomers())
                 LSCalled.append(solver.getNumberOfTimeLSIsCalled())
                 #print(solver.getSolution())
-                solver.getSolution().DrawSolution(parameters[i][-1])
+                solver.getSolution().DrawSolution(parameters[i][-1]+"WithLS")
             print(solver,"\t", sum(dist) / len(dist), "\t",sum(no_customers) / len(no_customers), "\t",sum(LSCalled) / len(LSCalled))
         print()
