@@ -54,7 +54,7 @@ class Solution:
 
         color = plt.cm.rainbow(np.linspace(0, 1, self.getNumberOfVehicles()))
         count = 1
-        plt.figure(figsize=(8, 6), dpi=80)
+        plt.figure(figsize=(6, 4), dpi=80)
         for route, c in zip(self.getVehiclesList(), color):
             xs = [route.getCustomerVisit(x).getX() for x in range(route.getNumberOfCustomerVisits())]
             ys = [route.getCustomerVisit(x).getY() for x in range(route.getNumberOfCustomerVisits())]
