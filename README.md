@@ -1,6 +1,6 @@
 # Dynamic Insertion
 
-This repository contains the Python implementation of the various heuristic methods described in the paper: ["Dynamic Insertion"](https://www.lancaster.ac.uk/staff/letchfoa/articles/dynamic-insertion.pdf).
+This repository contains the Python implementation of the various heuristic methods described in the paper: ["A Sum-of-Squares Heuristic for a Dynamic Vehicle Routing Problem"](https://www.lancaster.ac.uk/staff/letchfoa/articles/dynamic-insertion.pdf).
 
 ## Dataset
 
