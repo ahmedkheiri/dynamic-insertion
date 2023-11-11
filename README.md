@@ -23,35 +23,35 @@ Below are the plots of each solution:
 
 ### instanceAUni
 
-- ![instanceAUni.png](plots/instanceAUni.png)
+![instanceAUni.png](plots/instanceAUni.png)
 
 ### instanceBUni
 
-- ![instanceBUni.png](plots/instanceBUni.png)
+![instanceBUni.png](plots/instanceBUni.png)
 
 ### instanceCUni
 
-- ![instanceCUni.png](plots/instanceCUni.png)
+![instanceCUni.png](plots/instanceCUni.png)
 
 ### instanceDUni
 
-- ![instanceDUni.png](plots/instanceDUni.png)
+![instanceDUni.png](plots/instanceDUni.png)
 
 ### instanceAExp
 
-- ![instanceAExp.png](plots/instanceAExp.png)
+![instanceAExp.png](plots/instanceAExp.png)
 
 ### instanceBExp
 
-- ![instanceBExp.png](plots/instanceBExp.png)
+![instanceBExp.png](plots/instanceBExp.png)
 
 ### instanceCExp
 
-- ![instanceCExp.png](plots/instanceCExp.png)
+![instanceCExp.png](plots/instanceCExp.png)
 
 ### instanceDExp
 
-- ![instanceDExp.png](plots/instanceDExp.png)
+![instanceDExp.png](plots/instanceDExp.png)
 
 ## Problem Instance Format
 
