@@ -58,7 +58,7 @@ Below are the plots of each solution:
 Each problem instance follows the format below:
 
 - The first line: Number of customers (always 100).
-- The second line: ID of the depot and the coordinates of the depot.
+- The second line: ID of the depot and its coordinates.
 
 Following that, there are 100 lines, each containing the following information for a customer: customer_ID X_coordinate Y_coordinate
 
