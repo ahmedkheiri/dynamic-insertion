@@ -23,7 +23,7 @@ Below are the plots of each solution:
 
 ### instanceAUni
 
-<img src="plots/instanceAUni.png" alt="instanceAUni.png" width="300"/> <img src="plots/instanceAUni.png" alt="instanceAUniWithLS.png" width="300"/>
+<img src="plots/instanceAUni.png" alt="instanceAUni.png" width="350"/> <img src="plots/instanceAUniWithLS.png" alt="instanceAUniWithLS.png" width="350"/>
 
 ### instanceBUni
 
