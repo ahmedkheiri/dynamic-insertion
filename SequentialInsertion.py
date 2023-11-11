@@ -15,14 +15,14 @@ class SequentialInsertion(Solver):
     def solve(self):
         current_vehicle = 0
         current_customer = 0
-        self.getSolution().setVehicle(Vehicle(self.getProblem().getQ(), self.getProblem().getDepot()))
+        self.getSolution().setVehicle(Vehicle(self.getProblem().getDepot()))
         
         keep_track = self.getSolution().getSolutionNumberOfSatisfiedCustomers()
         while True:
             best_loc = -1
             best_obj = 1000000000000
             
-            if (self.getProblem().getConstraintType() == "DD") and (self.getCustomerDistanceToDepot(current_customer) * 2 >  self.getProblem().getOptimalObj()/self.getProblem().getM()):
+            if self.getCustomerDistanceToDepot(current_customer) * 2 >  self.getProblem().getD():
                 current_customer += 1
                 if current_customer >= self.getProblem().getNumberOfCustomers():
                     break
@@ -30,18 +30,10 @@ class SequentialInsertion(Solver):
             
             for j in range(self.getSolution().getVehicle(current_vehicle).getNumberOfCustomerVisits() + 1):
                 self.getSolution().getVehicle(current_vehicle).insertCustomerVisit(j, self.getProblem().getCustomer(current_customer))
-                # "DC" constraint
-                if (self.getProblem().getConstraintType() == "DC") and (self.getSolution().getVehicle(current_vehicle).getTotalDemand() <= self.getSolution().getVehicle(current_vehicle).getCapacity()):
+                if self.getSolution().getVehicle(current_vehicle).getTotalDistance() <=  self.getProblem().getD():
                     if self.getSolution().getVehicle(current_vehicle).getTotalDistance() < best_obj:
                         best_loc = j
                         best_obj = self.getSolution().getVehicle(current_vehicle).getTotalDistance()
-                # "DD" conatrint    
-                elif (self.getProblem().getConstraintType() == "DD") and (self.getSolution().getVehicle(current_vehicle).getTotalDistance() <=  self.getProblem().getOptimalObj()/self.getProblem().getM()):
-                    if self.getSolution().getVehicle(current_vehicle).getTotalDistance() < best_obj:
-                        best_loc = j
-                        best_obj = self.getSolution().getVehicle(current_vehicle).getTotalDistance()
-                        
-                        
                 self.getSolution().getVehicle(current_vehicle).deleteCustomerVisit(j)
             if best_loc != -1:
                 self.getSolution().getVehicle(current_vehicle).insertCustomerVisit(best_loc, self.getProblem().getCustomer(current_customer))
@@ -51,7 +43,7 @@ class SequentialInsertion(Solver):
             else:
                 if self.getSolution().getNumberOfVehicles() < self.getProblem().getM():
                     current_vehicle += 1
-                    self.getSolution().setVehicle(Vehicle(self.getProblem().getQ(), self.getProblem().getDepot()))
+                    self.getSolution().setVehicle(Vehicle(self.getProblem().getDepot()))
                 else:
                     break
             if self.getNumberOfCustomersToApplyLS() != 0:

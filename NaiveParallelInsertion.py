@@ -11,7 +11,7 @@ from Vehicle import Vehicle
 class NaiveParallelInsertion(Solver):
     def solve(self):
         current_customer = 0
-        self.getSolution().setVehicle(Vehicle(self.getProblem().getQ(), self.getProblem().getDepot()))
+        self.getSolution().setVehicle(Vehicle(self.getProblem().getDepot()))
         
         keep_track = self.getSolution().getSolutionNumberOfSatisfiedCustomers()
         while True:
@@ -21,14 +21,7 @@ class NaiveParallelInsertion(Solver):
             for veh in range(self.getSolution().getNumberOfVehicles()):
                 for j in range(self.getSolution().getVehicle(veh).getNumberOfCustomerVisits() + 1):
                     self.getSolution().getVehicle(veh).insertCustomerVisit(j, self.getProblem().getCustomer(current_customer))
-                    # "DC" constraint
-                    if (self.getProblem().getConstraintType() == "DC") and (self.getSolution().getVehicle(veh).getTotalDemand() <= self.getSolution().getVehicle(veh).getCapacity()):
-                        if self.getSolution().getSolutionTotalDistance() < best_obj:
-                            best_loc = j
-                            best_veh = veh
-                            best_obj = self.getSolution().getSolutionTotalDistance()
-                    # "DD" conatrint    
-                    elif (self.getProblem().getConstraintType() == "DD") and (self.getSolution().getVehicle(veh).getTotalDistance() <=  self.getProblem().getOptimalObj()/self.getProblem().getM()):
+                    if self.getSolution().getVehicle(veh).getTotalDistance() <=  self.getProblem().getD():
                         if self.getSolution().getSolutionTotalDistance() < best_obj:
                             best_loc = j
                             best_veh = veh
@@ -38,7 +31,7 @@ class NaiveParallelInsertion(Solver):
                 self.getSolution().getVehicle(best_veh).insertCustomerVisit(best_loc, self.getProblem().getCustomer(current_customer))
             if self.getSolution().getVehicle(self.getSolution().getNumberOfVehicles() - 1).getNumberOfCustomerVisits() != 0:
                 if self.getSolution().getNumberOfVehicles() < self.getProblem().getM():
-                    self.getSolution().setVehicle(Vehicle(self.getProblem().getQ(), self.getProblem().getDepot()))
+                    self.getSolution().setVehicle(Vehicle(self.getProblem().getDepot()))
             current_customer += 1
             if current_customer >= self.getProblem().getNumberOfCustomers():
                 break

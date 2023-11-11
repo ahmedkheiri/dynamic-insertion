@@ -40,10 +40,7 @@ class LocalSearch:
     def getFeasibility(self):
         feas = 0
         for current_vehicle in range(self.getSolution().getNumberOfVehicles()):
-            if self.getProblem().getConstraintType() == "DC":
-                feas += max(0,self.getSolution().getVehicle(current_vehicle).getTotalDemand() - self.getSolution().getVehicle(current_vehicle).getCapacity())
-            elif self.getProblem().getConstraintType() == "DD":
-                feas += max(0,self.getSolution().getVehicle(current_vehicle).getTotalDistance() -  self.getProblem().getOptimalObj()/self.getProblem().getM())
+            feas += max(0,self.getSolution().getVehicle(current_vehicle).getTotalDistance() -  self.getProblem().getD())
         return feas
     
     def getObjective(self, w1=100000000, w2=100000, w3=1):
@@ -56,7 +53,7 @@ class LocalSearch:
     ########################### LLHs Section
     
     def getNumberOfLLHs(self):
-        return 4
+        return 2
     
     def applyLLH(self, llh):
         if llh == 0:

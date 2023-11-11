@@ -44,18 +44,13 @@ class Solution:
         for i in range(self.getNumberOfVehicles()):
             totalDistance += self.getVehicle(i).getTotalDistance()**2
         return totalDistance
-    def getSolutionTotalDemand(self):
-        totalDemand = 0
-        for i in range(self.getNumberOfVehicles()):
-            totalDemand += self.getVehicle(i).getTotalDemand()
-        return totalDemand
     def getSolutionNumberOfSatisfiedCustomers(self):
         total = 0
         for i in range(self.getNumberOfVehicles()):
             total += self.getVehicle(i).getNumberOfCustomerVisits()
         return total
     
-    def DrawSolution(self):
+    def DrawSolution(self, title):
 
         color = plt.cm.rainbow(np.linspace(0, 1, self.getNumberOfVehicles()))
         count = 1
@@ -73,7 +68,10 @@ class Solution:
         plt.grid()
         plt.legend(bbox_to_anchor=(1.05, 1.0), loc='upper left')
         plt.tight_layout()
-        plt.show()    
+        plt.title(title)
+        plt.show()
+        plt.savefig("plots/"+title)
+
     
     def __str__(self):
-        return "Sol Satisfied Customers: {}\nSol Total Dist: {}\nSol Total Demand: {}\nSol Number Of Vehicles: {}\nVehicles: {}\n".format(self.getSolutionNumberOfSatisfiedCustomers(), self.getSolutionTotalDistance(), self.getSolutionTotalDemand(), self.getNumberOfVehicles(), self.__vehicles)
+        return "Sol Satisfied Customers: {}\nSol Total Dist: {}\nSol Number Of Vehicles: {}\nVehicles: {}\n".format(self.getSolutionNumberOfSatisfiedCustomers(), self.getSolutionTotalDistance(), self.getNumberOfVehicles(), self.__vehicles)

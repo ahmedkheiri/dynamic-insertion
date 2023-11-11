@@ -9,13 +9,10 @@ from Customer import Customer
 from Depot import Depot
 
 class Vehicle:
-    def __init__(self,capacity,depot):
-        self.__capacity = capacity
+    def __init__(self,depot):
         self.__depot = depot
         self.__customer_visits = []
     
-    def getCapacity(self):
-        return self.__capacity
     def getDepot(self) -> Depot:
         return self.__depot
     def getCustomerVisit(self, index) -> Customer:
@@ -37,12 +34,8 @@ class Vehicle:
         totalDist += ((self.getCustomerVisit(0).getX() - self.getDepot().getX()) ** 2 + (self.getCustomerVisit(0).getY() - self.getDepot().getY()) ** 2) ** 0.5
         totalDist += ((self.getCustomerVisit(self.getNumberOfCustomerVisits() - 1).getX() - self.getDepot().getX()) ** 2 + (self.getCustomerVisit(self.getNumberOfCustomerVisits() - 1).getY() - self.getDepot().getY()) ** 2) ** 0.5
         return totalDist
-    def getTotalDemand(self):
-        totalDemand = 0
-        for i in range(self.getNumberOfCustomerVisits()):
-            totalDemand += self.getCustomerVisit(i).getDemand()
-        return totalDemand
+
     def __str__(self):
-        return "Vehicle Capacity: {}, Total Distance: {}, Total Demand: {}, Visits: {}".format(self.__capacity, self.getTotalDistance(), self.getTotalDemand(), self.__customer_visits)
+        return "Total Distance: {}, Visits: {}".format(self.getTotalDistance(), self.__customer_visits)
     def __repr__(self):
         return self.__str__()

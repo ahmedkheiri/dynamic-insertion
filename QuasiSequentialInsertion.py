@@ -12,7 +12,7 @@ class QuasiSequentialInsertion(Solver):
     def solve(self):
         current_customer = 0
         current_vehicle = 0
-        self.getSolution().setVehicle(Vehicle(self.getProblem().getQ(), self.getProblem().getDepot()))
+        self.getSolution().setVehicle(Vehicle(self.getProblem().getDepot()))
         
         keep_track = self.getSolution().getSolutionNumberOfSatisfiedCustomers()
         while True:
@@ -20,13 +20,7 @@ class QuasiSequentialInsertion(Solver):
             best_obj = 1000000000000
             for j in range(self.getSolution().getVehicle(current_vehicle).getNumberOfCustomerVisits() + 1):
                 self.getSolution().getVehicle(current_vehicle).insertCustomerVisit(j, self.getProblem().getCustomer(current_customer))
-                # "DC" constraint
-                if (self.getProblem().getConstraintType() == "DC") and (self.getSolution().getVehicle(current_vehicle).getTotalDemand() <= self.getSolution().getVehicle(current_vehicle).getCapacity()):
-                    if self.getSolution().getVehicle(current_vehicle).getTotalDistance() < best_obj:
-                        best_loc = j
-                        best_obj = self.getSolution().getVehicle(current_vehicle).getTotalDistance()
-                # "DD" conatrint    
-                elif (self.getProblem().getConstraintType() == "DD") and (self.getSolution().getVehicle(current_vehicle).getTotalDistance() <=  self.getProblem().getOptimalObj()/self.getProblem().getM()):
+                if self.getSolution().getVehicle(current_vehicle).getTotalDistance() <=  self.getProblem().getD():
                     if self.getSolution().getVehicle(current_vehicle).getTotalDistance() < best_obj:
                         best_loc = j
                         best_obj = self.getSolution().getVehicle(current_vehicle).getTotalDistance()
@@ -44,7 +38,7 @@ class QuasiSequentialInsertion(Solver):
                 if current_vehicle >= self.getSolution().getNumberOfVehicles():
                     
                     if self.getSolution().getNumberOfVehicles() < self.getProblem().getM():
-                        self.getSolution().setVehicle(Vehicle(self.getProblem().getQ(), self.getProblem().getDepot()))
+                        self.getSolution().setVehicle(Vehicle(self.getProblem().getDepot()))
                     else:
                         current_customer += 1
                         current_vehicle = 0
