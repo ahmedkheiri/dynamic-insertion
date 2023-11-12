@@ -4,7 +4,7 @@ This repository contains the Python implementation of the various heuristic meth
 
 ## Dataset
 
-The `dataset` folder includes a sample of 8 problem instances. The table below provides a summary of the characteristics of each instance and the number of customers served using the SoS insertion algorithm:
+The `dataset` folder includes a sample of 8 problem instances. The table below provides a summary of the characteristics of each instance and the number of customers served using the SoS insertion algorithm (with/without LS):
 
 | Instance         | m   | D   | DL  | SoS | SoS with LS |
 |------------------|-----|-----|-----|-----|-------------|
@@ -15,7 +15,7 @@ The `dataset` folder includes a sample of 8 problem instances. The table below p
 | instanceAExp.xy  | 5   | 2   | Exp | 47  | 61          |
 | instanceBExp.xy  | 5   | 4   | Exp | 100 | 100         |
 | instanceCExp.xy  | 5   | 2   | Exp | 25  | 25          |
-| instanceDExp.xy  | 5   | 4   | Exp | 78  | 97          |
+| instanceDExp.xy  | 5   | 4   | Exp | 78  | 98          |
 
 ## Solution Plots
 
