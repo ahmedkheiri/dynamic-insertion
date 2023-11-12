@@ -27,31 +27,32 @@ Below are the plots of each solution:
 
 ### instanceBUni
 
-![instanceBUni.png](plots/instanceBUni.png)
+<img src="plots/instanceBUni.png" alt="instanceBUni.png" width="350"/>
 
 ### instanceCUni
 
-![instanceCUni.png](plots/instanceCUni.png)
+<img src="plots/instanceCUni.png" alt="instanceCUni.png" width="350"/>
 
 ### instanceDUni
 
-![instanceDUni.png](plots/instanceDUni.png)
+<img src="plots/instanceDUni.png" alt="instanceDUni.png" width="350"/>
 
 ### instanceAExp
 
-![instanceAExp.png](plots/instanceAExp.png)
+<img src="plots/instanceAExp.png" alt="instanceAExp.png" width="350"/>
 
 ### instanceBExp
 
-![instanceBExp.png](plots/instanceBExp.png)
+<img src="plots/instanceBExp.png" alt="instanceBExp.png" width="350"/>
 
 ### instanceCExp
 
-![instanceCExp.png](plots/instanceCExp.png)
+<img src="plots/instanceCExp.png" alt="instanceCExp.png" width="350"/>
 
 ### instanceDExp
 
-![instanceDExp.png](plots/instanceDExp.png)
+<img src="plots/instanceDExp.png" alt="instanceDExp.png" width="350"/>
+
 
 ## Problem Instance Format
 

@@ -66,7 +66,7 @@ class Solution:
             plt.plot(xs, ys,c=c,linestyle='dashed')
             count+=1 
         plt.grid()
-        plt.legend(bbox_to_anchor=(1.05, 1.0), loc='upper left')
+        #plt.legend(bbox_to_anchor=(1.05, 1.0), loc='upper left')
         plt.tight_layout()
         plt.savefig("plots/"+title)
         plt.show()
