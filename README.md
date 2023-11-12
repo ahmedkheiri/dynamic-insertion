@@ -11,47 +11,63 @@ The `dataset` folder includes a sample of 8 problem instances. The table below p
 | instanceAUni.xy  | 5   | 2   | Uni | 28  | 30          |
 | instanceBUni.xy  | 5   | 4   | Uni | 100 | 100         |
 | instanceCUni.xy  | 5   | 2   | Uni | 29  | 30          |
-| instanceDUni.xy  | 5   | 4   | Uni | 74  | 89          |
-| instanceAExp.xy  | 5   | 2   | Exp | 47  | 59          |
+| instanceDUni.xy  | 5   | 4   | Uni | 74  | 87          |
+| instanceAExp.xy  | 5   | 2   | Exp | 47  | 61          |
 | instanceBExp.xy  | 5   | 4   | Exp | 100 | 100         |
 | instanceCExp.xy  | 5   | 2   | Exp | 25  | 25          |
 | instanceDExp.xy  | 5   | 4   | Exp | 78  | 97          |
 
 ## Solution Plots
 
-Below are the plots of each solution:
+Below are the plots for each solution. For each problem instance, we illustrate two scenarios: one with the SoS insertion algorithm without any local search, and the other with the SoS insertion algorithm incorporating a local search that considers the SoS criterion as an objective.
 
 ### instanceAUni
 
-<img src="plots/instanceAUni.png" alt="instanceAUni.png" width="350"/> <img src="plots/instanceAUniWithLS.png" alt="instanceAUniWithLS.png" width="350"/>
+| Without Local Search | With Local Search |
+| --- | --- |
+| <img src="plots/instanceAUni.png" alt="instanceAUni.png" width="350"/> | <img src="plots/instanceAUniWithLS.png" alt="instanceAUniWithLS.png" width="350"/> |
 
 ### instanceBUni
 
-<img src="plots/instanceBUni.png" alt="instanceBUni.png" width="350"/>
+| Without Local Search | With Local Search |
+| --- | --- |
+| <img src="plots/instanceBUni.png" alt="instanceBUni.png" width="350"/> | <img src="plots/instanceBUniWithLS.png" alt="instanceBUniWithLS.png" width="350"/> |
 
 ### instanceCUni
 
-<img src="plots/instanceCUni.png" alt="instanceCUni.png" width="350"/>
+| Without Local Search | With Local Search |
+| --- | --- |
+| <img src="plots/instanceCUni.png" alt="instanceCUni.png" width="350"/> | <img src="plots/instanceCUniWithLS.png" alt="instanceCUniWithLS.png" width="350"/> |
 
 ### instanceDUni
 
-<img src="plots/instanceDUni.png" alt="instanceDUni.png" width="350"/>
+| Without Local Search | With Local Search |
+| --- | --- |
+| <img src="plots/instanceDUni.png" alt="instanceDUni.png" width="350"/> | <img src="plots/instanceDUniWithLS.png" alt="instanceDUniWithLS.png" width="350"/> |
 
 ### instanceAExp
 
-<img src="plots/instanceAExp.png" alt="instanceAExp.png" width="350"/>
+| Without Local Search | With Local Search |
+| --- | --- |
+| <img src="plots/instanceAExp.png" alt="instanceAExp.png" width="350"/> | <img src="plots/instanceAExpWithLS.png" alt="instanceAExpWithLS.png" width="350"/> |
 
 ### instanceBExp
 
-<img src="plots/instanceBExp.png" alt="instanceBExp.png" width="350"/>
+| Without Local Search | With Local Search |
+| --- | --- |
+| <img src="plots/instanceBExp.png" alt="instanceBExp.png" width="350"/> | <img src="plots/instanceBExpWithLS.png" alt="instanceBExpWithLS.png" width="350"/> |
 
 ### instanceCExp
 
-<img src="plots/instanceCExp.png" alt="instanceCExp.png" width="350"/>
+| Without Local Search | With Local Search |
+| --- | --- |
+| <img src="plots/instanceCExp.png" alt="instanceCExp.png" width="350"/> | <img src="plots/instanceCExpWithLS.png" alt="instanceCExpWithLS.png" width="350"/> |
 
 ### instanceDExp
 
-<img src="plots/instanceDExp.png" alt="instanceDExp.png" width="350"/>
+| Without Local Search | With Local Search |
+| --- | --- |
+| <img src="plots/instanceDExp.png" alt="instanceDExp.png" width="350"/> | <img src="plots/instanceDExpWithLS.png" alt="instanceDExpWithLS.png" width="350"/> |
 
 
 ## Problem Instance Format
