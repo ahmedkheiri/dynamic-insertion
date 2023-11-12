@@ -8,7 +8,7 @@ The `dataset` folder includes a sample of 8 problem instances. The table below p
 
 | Instance         | m   | D   | DL  | SoS | SoS with LS |
 |------------------|-----|-----|-----|-----|-------------|
-| instanceAUni.xy  | 5   | 2   | Uni | 28  | 29          |
+| instanceAUni.xy  | 5   | 2   | Uni | 28  | 30          |
 | instanceBUni.xy  | 5   | 4   | Uni | 100 | 100         |
 | instanceCUni.xy  | 5   | 2   | Uni | 29  | 30          |
 | instanceDUni.xy  | 5   | 4   | Uni | 74  | 89          |
