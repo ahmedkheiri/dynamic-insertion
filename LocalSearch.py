@@ -122,9 +122,10 @@ class LocalSearch:
         
         current_index = random.randint(0, self.getSolution().getVehicle(vehicle1).getNumberOfCustomerVisits() - 1)
         
-        new_index = random.randint(0, self.getSolution().getVehicle(vehicle2).getNumberOfCustomerVisits())
-        
         element = self.getSolution().getVehicle(vehicle1).getCustomerVisitsList().pop(current_index)
+        
+        new_index = random.randint(0, self.getSolution().getVehicle(vehicle2).getNumberOfCustomerVisits())
+
         self.getSolution().getVehicle(vehicle2).getCustomerVisitsList().insert(new_index, element)
         
         
