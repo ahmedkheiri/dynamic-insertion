@@ -82,6 +82,6 @@ Following that, there are 100 lines, each containing the following information f
 
 ## Contributors
 
-- [Adam Letchford](https://www.lancaster.ac.uk/staff/letchfoa/)
 - [Ahmed Kheiri](https://ahmedkheiri.github.io/)
+- [Adam Letchford](https://www.lancaster.ac.uk/staff/letchfoa/)
 - [Matthew Randall](https://www.lancaster.ac.uk/stor-i-student-sites/matthew-randall/)
