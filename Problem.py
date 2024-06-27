@@ -20,9 +20,10 @@ class Problem:
              
         df = pd.read_table(self.getFileName())
         for i in range(1,len(df)):
-            c = df.iloc[i][0].split(" ")
+            c = df.iloc[i, 0].split(" ")
             self.setCustomer(Customer(int(c[0]), float(c[1]),float(c[2])))
-        d = df.iloc[0][0].split(" ")
+        d = df.iloc[0, 0].split(" ")
+
         self.setDepot(Depot(int(d[0]), float(d[1]),float(d[2])))
         
     def getFileName(self):

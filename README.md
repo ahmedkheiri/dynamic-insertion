@@ -4,18 +4,18 @@ This repository contains the Python implementation of the various heuristic meth
 
 ## Dataset
 
-The `dataset` folder includes a sample of 8 problem instances. The table below provides a summary of the characteristics of each instance and the number of customers served using the SoS insertion algorithm (with/without LS):
+The `dataset` folder includes a sample of 8 problem instances. The table below provides a summary of the characteristics of each instance and the number of customers served using the SoS insertion algorithm (with/without local search). The table also shows the lower bound (LB) and upper bound (UB) figures obtained using an exact model to provide the upper bound values.
 
-| Instance         | m   | D   | DL  | SoS | SoS with LS |
-|------------------|-----|-----|-----|-----|-------------|
-| instanceAUni.xy  | 5   | 2   | Uni | 28  | 30          |
-| instanceBUni.xy  | 5   | 4   | Uni | 100 | 100         |
-| instanceCUni.xy  | 5   | 2   | Uni | 29  | 30          |
-| instanceDUni.xy  | 5   | 4   | Uni | 74  | 87          |
-| instanceAExp.xy  | 5   | 2   | Exp | 47  | 61          |
-| instanceBExp.xy  | 5   | 4   | Exp | 100 | 100         |
-| instanceCExp.xy  | 5   | 2   | Exp | 25  | 25          |
-| instanceDExp.xy  | 5   | 4   | Exp | 78  | 98          |
+| Instance         | m   | D   | DL  | SoS | SoS with LS | UB  | LB  |
+|------------------|-----|-----|-----|-----|-------------|-----|-----|
+| instanceAUni.xy  | 5   | 2   | Uni | 28  | 30          | 52  | 49  |
+| instanceBUni.xy  | 5   | 4   | Uni | 100 | 100         | 100 | 100 |
+| instanceCUni.xy  | 5   | 2   | Uni | 29  | 30          | 33  | 33  |
+| instanceDUni.xy  | 5   | 4   | Uni | 74  | 87          | 97  | 92  |
+| instanceAExp.xy  | 5   | 2   | Exp | 47  | 61          | 82  | 77  |
+| instanceBExp.xy  | 5   | 4   | Exp | 100 | 100         | 100 | 100 |
+| instanceCExp.xy  | 5   | 2   | Exp | 25  | 25          | 32  | 32  |
+| instanceDExp.xy  | 5   | 4   | Exp | 78  | 98          | 100 | 98  |
 
 ## Solution Plots
 

@@ -11,6 +11,7 @@ from QuasiSequentialInsertion import QuasiSequentialInsertion
 from NaiveParallelInsertion import NaiveParallelInsertion
 from ParallelInsertionWithSeeds import ParallelInsertionWithSeeds
 from SumOfSquaresInsertion import SumOfSquaresInsertion
+from Exact import Exact
 from SRIE import SRIE
 
 parameters = []
@@ -32,9 +33,10 @@ isSumSqObj_LS = [False,True]
 
 
 ########## UPDATED PARAMETERS FOR TESTING
-#parameters = [("dataset/instanceAUni.xy", 5, 2, "instanceAUni")]
+#parameters = [("dataset/instanceCUni.xy", 5, 2, "test")]
 no_runs = 1
-solvers = [SumOfSquaresInsertion]
+number_of_customers_served_to_apply_LS = 0
+solvers = [Exact]
 isSumSqObj_LS = [True]
 #####################
 
@@ -57,4 +59,5 @@ for isSumSqObj in isSumSqObj_LS:
                 #print(solver.getSolution())
                 solver.getSolution().DrawSolution(parameters[i][-1]+"WithLS")
             print(solver,"\t", sum(dist) / len(dist), "\t",sum(no_customers) / len(no_customers), "\t",sum(LSCalled) / len(LSCalled))
+            #print(solver.getSolution())
         print()
